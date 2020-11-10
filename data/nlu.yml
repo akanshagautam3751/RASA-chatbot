@@ -1,0 +1,222 @@
+version: "2.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: book_room_request
+    examples: |
+      - I want to book a room
+      - I want to book room
+      - I would like to book a room
+      - Book a room
+      - room book
+      - Could you please book a room for me?
+
+  - intent: number_of_rooms
+    examples: |
+      - I would like to book [2](num_rooms) rooms
+      - I would like to book [two](num_rooms) rooms
+      - I would like to book [three](num_rooms) rooms
+      - I would like to book [one](num_rooms) room
+      - I want to book [one](num_rooms) room for 2 people
+      - I want to book [1](num_rooms) room for 2 people
+      - I want to book [two](num_rooms) rooms for 3 people
+      - I want to book [2](num_rooms) rooms for 3 people
+      - I want to book [three](num_rooms) rooms for 4 people
+      - I want to book [3](num_rooms) rooms for 4 people
+      - I want to book [two](num_rooms) rooms for 4 people
+      - I want to book [2](num_rooms) rooms for 4 people
+      - I want to book [four](num_rooms) rooms
+      - I want to book [4](num_rooms) rooms
+      - I want to book [5](num_rooms) rooms
+      - I want to book [five](num_rooms) rooms
+      - I want to book [two](num_rooms) rooms
+      - [2](num_rooms) rooms
+      - [two](num_rooms) rooms
+      - [1](num_rooms) room
+      - [one](num_rooms) room
+      - [3](num_rooms) rooms
+      - [3](num_rooms) room
+
+  - intent: type_of_room
+    examples: |
+      - Clicks on Button [1](room_type)
+      - Clicks on Button [2](room_type)
+      - Clicks on Button [1](room_type)
+      - Clicks on Button [2](room_type)
+      - Button [1](room_type)
+      - Button [2](room_type)
+      - User clicks on Button [1](room_type)
+      - User clicks on Button [2](room_type)
+      - button [1](room_type)
+      - button [2](room_type)
+
+  - intent: clean_room_request
+    examples: |
+      - I want to have my room cleaned
+      - Can you clean my room?
+      - I want my room to get clean
+      - Can you call your staff to clean my room
+      - I want my room clean
+      - I want your staff to clean my room
+
+  - intent: schedule_cleaning_right_away
+    examples: |
+      - Could you send someone right now?
+      - I want your right now to clean my room
+      - Would you mind send someone right now?
+      - Would you mind sending your staff right now?
+      - Could you send your staff right now?
+      - Would it be fine if you'll send your staff right now?
+      - Would it be fine if you'll send someone right now?
+      - I want my room to get cleaned right now?
+      - Can you please clean my room right now?
+      - Can you send someone to clean my room right now?
+      - Could you call your staff to clean my room right now?
+
+  - intent: schedule_cleaning_relative_time
+    examples: |
+      - Could you send someone after [1](schedule_time) hour?
+      - Send someone after [1](schedule_time) hour
+      - Could you send your staff after [1](schedule_time) hour?
+      - Would you mind sending your staff after [1](schedule_time) hour?
+      - Would you mind sending someone after [1](schedule_time) hour?
+      - Could you send someone after [2](schedule_time) hours?
+      - Send someone after [2](schedule_time) hours
+      - Could you send your staff after [2](schedule_time) hours?
+      - Would you mind sending your staff after [2](schedule_time) hours?
+      - Would you mind sending someone after [2](schedule_time) hours?
+      - Could you send someone after [3](schedule_time) hours?
+      - Send someone after [3](schedule_time) hours
+      - Could you send your staff after [3](schedule_time) hours?
+      - Would you mind sending your staff after [3](schedule_time) hours?
+      - Would you mind sending someone after [3](schedule_time) hours?
+      - Could you send someone after [4](schedule_time) hours?
+      - Send someone after [4](schedule_time) hours
+      - Could you send your staff after [4](schedule_time) hours?
+      - Would you mind sending your staff after [4](schedule_time) hours?
+      - Would you mind sending someone after [4](schedule_time) hours?
+      - Could you send someone after [5](schedule_time) hours?
+      - I want to get my room cleaned after [1](schedule_time) hour.
+      - I want to get my room cleaned after [2](schedule_time) hours.
+      - I want to get my room cleaned after [3](schedule_time) hours.
+      - I want to get my room cleaned after [4](schedule_time) hours.
+
+  - intent: check_in_timings
+    examples: |
+      - What are your check-in timings?
+      - check-in timings
+      - At what time, I can check-in?
+      - When can I check-in?
+      - At what time, am I supposed to check-in?
+
+  - intent: check_out_timings
+    examples: |
+      - What are your check-out timings?
+      - check-out timings
+      - At what time, I can check-out?
+      - When can I check-out?
+      - At what time, am I supposed to check-out?
+
+  - intent: cancel_reservation
+    examples: |
+      - How do I cancel a reservation?
+      - What are your cancel reservation policy?
+      - How can I cancel a reservation that I made yesterday?
+      - Cancel reservation
+      - How to cancel reservation?
+
+  - intent: cancellation_policy
+    examples: |
+      - What is your cancellation policy?
+      - Could you please tell me your cancellation policy?
+      - Can you tell me your cancellation policy?
+      - Can you explain me your cancellation policy?
+      - Can you describe me your cancellation policy?
+      - cancellation policy
+
+  - intent: restaurant
+    examples: |
+      - Does the hotel have a restaurant?
+      - Is there any restaurant in your hotel?
+      - Does your hotel consists a restaurant?
+      - Do you have any restaurant?
+      - Is there any restaurant?
+
+  - intent: breakfast_availability
+    examples: |
+      - Does the hotel offer breakfast?
+      - Is there any breakfast availability in your hotel?
+      - Do you offer breakfast in your hotel?
+      - Is there any breakfast facility avaliable in your hotel?
+      - Do you provide breakfast?
+
+  - intent: breakfast_timing
+    examples: |
+      - What are the breakfast timings?
+      - When do you provide breakfast?
+      - At what time, do you provide breakfast?
+      - What are the timings of your breakfast?
+      - When do you offer breakfast?
+
+  - intent: restaurant_timings
+    examples: |
+      - What are the timings of your restaurant?
+      - What are your restaurant timings?
+      - When does your restaurant opens? 
+      - When does your restaurant closes?
+      - What are the opening and closing timings of your restaurant?
