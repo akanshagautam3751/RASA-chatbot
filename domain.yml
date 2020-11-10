@@ -1,0 +1,80 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - check_in_timings
+  - check_out_timings
+  - cancel_reservation
+  - cancellation_policy
+  - restaurant
+  - breakfast_availability
+  - breakfast_timing
+  - restaurant_timings
+  - book_room_request
+  - number_of_rooms
+  - type_of_room
+  - clean_room_request
+  - schedule_cleaning_right_away
+  - schedule_cleaning_relative_time
+
+actions:
+  - action_book_room_request
+  - action_number_of_rooms
+  - action_type_room
+  - action_schedule_cleaning_relative_time
+
+entities:
+  - num_rooms
+  - room_type
+  - schedule_time
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_clean_room_request:
+    - text: "When should I arrange for a cleaning? If not right now then, please mention after how many hours do you want to clean your room."
+
+  utter_schedule_cleaning_right_away:
+    - text: "Sure, I will send someone to your room right away."
+
+  utter_check_in_timings:
+    - text: "Check-in time starts at 4 PM. Minimum check-in age is 21. Please contact the reception for early check-in requests."
+
+  utter_check_out_timings:
+    - text: "Check-out time is 11 AM. Please contact the reception for late checkout requests."
+
+  utter_cancel_reservation:
+    - text: "To cancel a reservation, select the “Reservations” link from the homepage. On the Reservations page, under the heading ‘View, Change or Cancel a Reservation,’ enter your confirmation number, and either the last name on the reservation or the last four digits of the credit card used to make the reservation."
+
+  utter_cancellation_policy:
+    - text: "The booking deposit is refundable if the cancellation occurs at least 15 days before arrival. For cancellations made after this limit, a penalty will be imposed based on the cancellation policy."
+
+  utter_restaurant:
+    - text: "Yes, the hotel has a restaurant called the Zephyr Bar. With our menu we strive to reflect the historic art and the spirit of our neighborhood by offering a glimpse into what makes our area unique."
+
+  utter_breakfast_availability:
+    - text: "The hotel provides its guests with a free made-to-order breakfast each morning."
+
+  utter_breakfast_timing:
+    - text: "Monday through Friday breakfast is 6 am to 9 am. On Saturday and Sunday, we are open from 7 am to 10:30 am."
+
+  utter_restaurant_timings:
+    - text: "Our restaurant serves a dazzling 24-hour menu."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
